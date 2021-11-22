@@ -1,6 +1,14 @@
 //Titulo: Tarea de Servicios Municipales - fichero java
 //Autor: Diego Velasco Peribáñez
 
+var cantidad1=0;
+var cantidad2=0;
+var cantidad3=0;
+var cantidad4=0;
+var cantidad5=0;
+var cantidad6=0;
+var cantidad7=0;
+
 var map;
 var datos = new Array();
 var totalpedido = 0;
@@ -205,7 +213,8 @@ function calculo_Importe_Linea() {
     var ctotal = document.querySelector("#total");
     ctotal.value=totalpedido;
 
-    switch (articuloventa.codigo){
+    alert(this.value)
+    switch (articulo.id){
         case '1':{
           cantidad1=this.value;
           break;

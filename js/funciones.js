@@ -49,14 +49,14 @@ function guardarVenta(){
         Teléfono.value,
         Email.value,
         fechaDesde.value,
+        total.value,
         cantidad1,
         cantidad2,
         cantidad3,
         cantidad4,
         cantidad5,
         cantidad6,
-        cantidad7,
-        total.value
+        cantidad7
 
     );
     i++;
@@ -64,10 +64,8 @@ function guardarVenta(){
     myDBInstance.transaction(
         function (tran) {
             
-            tran.executeSql(`INSERT INTO  ventas (num_ventas , contacto, fecha, telefono, email ,importe_total, cant_servicio1, cant_servicio2, cant_servicio3, cant_servicio4, cant_servicio5, cant_servicio6, cant_servicio7 ) values \n\
-            ("${venta.num_venta}","${venta.contacto}","${venta.fecha}","${venta.telefono}","${venta.email}",${venta.importe_total},${venta.cant_servicio1},${venta.cant_servicio2},${venta.cant_servicio3},${venta.cant_servicio4},${venta.cant_servicio5},${venta.cant_servicio6},${venta.cant_servicio7})`);
-        }
-
+            tran.executeSql('INSERT INTO  ventas (num_ventas , contacto, fecha, telefono, email ,importe_total, cant_servicio1, cant_servicio2, cant_servicio3, cant_servicio4, cant_servicio5, cant_servicio6, cant_servicio7 ) values \n\
+            ("'+venta.num_venta+'","'+venta.contacto+'","'+venta.fecha+'","'+venta.telefono+'","'+venta.email+'",'+venta.importe_total+','+venta.cant_servicio1+','+venta.cant_servicio2+','+venta.cant_servicio3+','+venta.cant_servicio4+','+venta.cant_servicio5+','+venta.cant_servicio6+','+venta.cant_servicio7+')');
         }
     );
 
