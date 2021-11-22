@@ -39,7 +39,7 @@ class servicios {
 /////////////////////// CLASE VENTAS /////////////////////////////////////////////
 //  Generamos la clase (con su constructor) para generar cada servicio
 class ventas {
-    constructor(num_venta, contacto, fecha, telefono, email, importe_total, Longitud, Precio, Duracion) {
+    constructor(num_venta, contacto, fecha, telefono, email, importe_total, cant_servicio1, cant_servicio2, cant_servicio3, cant_servicio4, cant_servicio5, cant_servicio6, cant_servicio7) {
         this.num_venta = num_venta;
         this.contacto = contacto;
         this.fecha = fecha;
