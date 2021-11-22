@@ -22,6 +22,7 @@ map = new google.maps.Map(
 
 inicio();
 
+addEventListener
 
 /////////////////////// CENTRAR EL MAPA /////////////////////////////////////////////
 function centrarMapa (){

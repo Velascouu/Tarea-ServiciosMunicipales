@@ -96,29 +96,3 @@ function datosArray() {
     });
 }
 
-function guardarVentas() {
-
-    var myDBInstance = openDatabase('dbMunicipio', '1.0', 'Venta de servicios municipales por pedido', 7 * 1024 * 1024);
-
-    if (!myDBInstance) {
-        alert('La base de Datos no se ha creado');
-    }
-    else {
-        var version = myDBInstance.version;
-
-        myDBInstance.transaction(function (tran) {
-            tran.executeSql('create table if not exists ventas (num_venta  varchar(6), \n\
-            contacto varchar(60),fecha date, telefono varchar(15),email varchar(30),importe_total float, cant_servicio1 float, cant_servicio2 float, cant_servicio3 float, cant_servicio4 float, cant_servicio5 float, cant_servicio6 float, cant_servicio7 float,   PRIMARY KEY(num_venta) );'
-                , [], nullDataHandler, errorHandler);
-        });
-    }
-
-
-
-    myDBInstance.transaction(
-        function (tran) {
-        
-            tran.executeSql('INSERT INTO  ventas (num_ventas , contacto, fecha, telefono, email ,importe_total, cant_servicio1, cant_servicio2, cant_servicio3, cant_servicio4, cant_servicio5, cant_servicio6, cant_servicio7 ) values ('+venta.num_ventas+', "Aguas","Calle Aguas",1,"41.67087166806011","-3.6769533013330147",45,2)')
-        }
-    );
-}
