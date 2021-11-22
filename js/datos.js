@@ -204,5 +204,37 @@ function calculo_Importe_Linea() {
 
     var ctotal = document.querySelector("#total");
     ctotal.value=totalpedido;
+
+    switch (articuloventa.codigo){
+        case '1':{
+          cantidad1=this.value;
+          break;
+        }
+        case '2':{
+          cantidad2=this.value;
+          break;
+        }
+        case '3':{
+          cantidad3=this.value;
+          break;
+        }
+        case '4':{
+          cantidad4=this.value;
+          break;
+        }
+        case '5':{
+          cantidad5=this.value;
+          break;
+        }
+        case '6':{
+          cantidad6=this.value;
+          break;
+        }
+        case '7':{
+          cantidad7=this.value;
+          break;
+        }
+      }
+
 }
 /////////////////////// CALCULAR IMPORTE DE LOS SERVICIOS /////////////////////////////////////////////
