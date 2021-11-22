@@ -14,6 +14,13 @@ else {
         tran.executeSql('create table if not exists servicios (id  varchar(6), \n\
         Descripcion varchar(60),Tipo int, Direccion varchar(15),Latitud varchar(15),Longitud varchar(15),Precio float,Duracion int,   PRIMARY KEY(Id) );'
             , [], nullDataHandler, errorHandler);
+
+        tran.executeSql('create table if not exists ventas (num_venta  int, \n\
+            contacto varchar(60) , fecha Date , telefono varchar(20) , email varchar(100) , importe_total float , cant_servicio1 float,\n\
+            cant_servicio2 float , cant_servicio3 float , cant_servicio4 float , cant_servicio5 float , cant_servicio6 float ,\n\
+            cant_servicio7 float, PRIMARY KEY(num_venta) );'
+            , [], nullDataHandler, errorHandler);
+        
         grabarRegistros();
         datosArray();
     });
